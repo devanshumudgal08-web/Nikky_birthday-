@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nikky 🎂</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100vh; font-family:Georgia,serif; overflow-x:hidden;
+  background:linear-gradient(135deg,#160b20,#35142d,#5b1d3b);
+  color:#fff; display:flex; align-items:center; justify-content:center;
+}
+.hearts span{
+  position:fixed; bottom:-30px; font-size:20px; opacity:.65;
+  animation:float 8s linear infinite; pointer-events:none;
+}
+.hearts span:nth-child(1){left:8%;animation-delay:0s}
+.hearts span:nth-child(2){left:22%;animation-delay:2s}
+.hearts span:nth-child(3){left:40%;animation-delay:4s}
+.hearts span:nth-child(4){left:63%;animation-delay:1s}
+.hearts span:nth-child(5){left:82%;animation-delay:3s}
+@keyframes float{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+.card{
+  width:min(92%,560px); margin:30px auto; padding:42px 25px;
+  text-align:center; border:1px solid rgba(255,255,255,.2);
+  border-radius:28px; background:rgba(255,255,255,.09);
+  backdrop-filter:blur(12px); box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+.small{letter-spacing:4px;text-transform:uppercase;font-size:12px;opacity:.75}
+h1{font-size:clamp(42px,12vw,72px);margin:14px 0 4px}
+.name{font-size:clamp(28px,8vw,44px);color:#ffd1e5}
+.cake{font-size:72px;margin:20px 0;animation:bounce 1.8s infinite}
+@keyframes bounce{50%{transform:translateY(-8px)}}
+.message{
+  line-height:1.8;font-size:17px;color:#f9e8ef;
+  margin:20px auto;max-width:460px;
+}
+button{
+  border:0;border-radius:30px;padding:13px 25px;font-size:15px;
+  cursor:pointer;background:#fff;color:#6b1d43;
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
+}
+#letter{display:none;margin-top:24px;animation:fade .8s ease}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.footer{margin-top:28px;font-size:12px;opacity:.55}
+</style>
+</head>
+<body>
+<div class="hearts">
+  <span>♥</span><span>♡</span><span>♥</span><span>♡</span><span>♥</span>
+</div>
+
+<main class="card">
+  <div class="small">A little birthday page for</div>
+  <h1>Happy Birthday</h1>
+  <div class="name">Nikky ✨</div>
+  <div class="cake">🎂</div>
+
+  <p class="message">
+    Some people remain special, even when life takes things in different
+    directions. Today is simply a reminder to wish you happiness,
+    beautiful moments, and everything good that you deserve.
+    <br><br>
+    <b>Happy Birthday, Nikky. 🌷</b>
+  </p>
+
+  <button onclick="openLetter()">Open a little message 💌</button>
+
+  <div id="letter">
+    <p class="message">
+      I hope this year brings you lots of reasons to smile,
+      peaceful days and memories you'll always be happy to keep.
+      No matter where life takes us, I genuinely wish the best for you.
+      <br><br>
+      Have the most beautiful birthday. ❤️
+    </p>
+  </div>
+
+  <div class="footer">Made with a little extra thought ✨</div>
+</main>
+
+<script>
+function openLetter(){
+  const x=document.getElementById("letter");
+  x.style.display="block";
+  event.target.style.display="none";
+}
+</script>
+</body>
+</html>
